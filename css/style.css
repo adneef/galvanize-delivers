@@ -1,0 +1,118 @@
+.copyright,
+a,
+a:hover {
+  color: ghostWhite;
+  text-decoration: none;
+}
+
+#delivery {
+  font-size: 28px;
+}
+
+.navbar {
+  border-right: 2px solid rgb(66, 215, 255);
+}
+.landingHeroContainer {
+  padding: 10% 25%;
+  color: ghostWhite;
+  text-align: center;
+  font-size: 80px;
+  background-image: url('http://www.inspiredwellness.com/wp-content/uploads/2016/05/Fotolia_105924931_Subscription_Monthly_M.jpg');
+}
+
+.copyHeadings{
+  color: red;
+  font-size: 30px;
+  padding: 2% 0;
+}
+
+.bottomNavRow{
+  padding: 2% 0;
+}
+
+.bottomGalv {
+  font-size: 32px;
+}
+
+.underGalv{
+  font-size: 1rem;
+   margin: 3% 0 0 0;
+}
+
+.bottomSide{
+  padding: 1% 0 0 0;
+}
+
+.footer {
+  padding-top: 1%;
+}
+
+.subText {
+  color: black;
+  font-size: 1rem;
+}
+
+.orderHeroContainer {
+  color: ghostWhite;
+  font-size: 28px;
+  text-shadow: 2px 2px black;
+  background-image: url('https://www.wired.com/wp-content/uploads/2016/05/GettyImages-601029157.jpg');
+}
+/*card beautifying*/
+.card-deck{
+  margin: 0 0 4% 0;
+}
+
+.card-price {
+  border-top: 1px solid grey;
+}
+
+.foodCard {
+  width: 260px;
+  background-color: ivory;
+  color: black;
+  font-size: 16px;
+  text-shadow: none;
+  border: .25px solid grey;
+}
+
+.card-title{
+  font-size: 27px;
+  text-shadow: none;
+}
+
+.cardImage {
+  padding: 3% 0;
+  height: 160px;
+  width: 240px;
+}
+.orderBtn {
+  margin: 1% 0 1% 2%;
+}
+
+/*table styling*/
+.table{
+  color: black;
+  font-size: 20px;
+  text-shadow: none;
+  background: ivory;
+}
+
+.tableBody{
+  font-size: 16px;
+}
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(0,0,0,.15);
+/*media queries to handle some text and nav pieces*/
+
+@media (max-width: 992px) {
+  .bottomNav {
+    display: none;
+  }
+  .landingHeroContainer {
+    font-size: 40px;
+  }
+  .copyHeadings {
+    font-size: 24px;
+  }
+}
