@@ -5,12 +5,19 @@ a:hover {
   text-decoration: none;
 }
 
+.btn{
+  box-shadow: 2px 2px 2px black;
+}
+
 #delivery {
   font-size: 28px;
 }
+.orderBtn {
+  box-shadow: none;
+}
 
 .navbar {
-  border-right: 2px solid rgb(66, 215, 255);
+  border-right: 4px solid rgb(66, 215, 255);
 }
 .landingHeroContainer {
   padding: 10% 25%;
@@ -30,6 +37,10 @@ a:hover {
   padding: 2% 0;
 }
 
+/*.bottomNav {
+  border-right: 2px solid rgb(66, 215, 255);
+}*/
+
 .bottomGalv {
   font-size: 32px;
 }
@@ -44,6 +55,7 @@ a:hover {
 }
 
 .footer {
+  border-right: 4px solid rgb(66, 215, 255);
   padding-top: 1%;
 }
 
@@ -54,13 +66,22 @@ a:hover {
 
 .orderHeroContainer {
   color: ghostWhite;
-  font-size: 28px;
+  font-size: 36px;
   text-shadow: 2px 2px black;
   background-image: url('https://www.wired.com/wp-content/uploads/2016/05/GettyImages-601029157.jpg');
 }
+
 /*card beautifying*/
+
 .card-deck{
-  margin: 0 0 4% 0;
+  margin: 1.45% 0 0 0;
+}
+.bottomDeck {
+  padding-bottom: 3%;
+}
+
+.wordBlock {
+  margin: 0 2%;
 }
 
 .card-price {
@@ -68,7 +89,8 @@ a:hover {
 }
 
 .foodCard {
-  width: 260px;
+  width: 320px;
+  height: 550px;
   background-color: ivory;
   color: black;
   font-size: 16px;
@@ -83,26 +105,78 @@ a:hover {
 
 .cardImage {
   padding: 3% 0;
-  height: 160px;
-  width: 240px;
+  /*height: 160px;
+  width: 240px;*/
+  height: 35%;
+  width: 96%;
 }
 .orderBtn {
   margin: 1% 0 1% 2%;
 }
 
 /*table styling*/
+
 .table{
   color: black;
   font-size: 20px;
   text-shadow: none;
   background: ivory;
+  margin: 2% 0 4% 2.5%;
 }
 
-.tableBody{
+.tableBody,
+tfoot {
   font-size: 16px;
 }
+
 .table-striped tbody tr:nth-of-type(odd) {
     background-color: rgba(0,0,0,.15);
+}
+
+.table-striped tbody td:nth-of-type(even) {
+    text-align:right;
+}
+
+thead th:nth-child(even){
+  text-align:right;
+}
+
+tfoot td{
+  text-align: right;
+}
+
+tfoot td:nth-child(odd){
+  width:66.6%;
+}
+
+tfoot tr:nth-child(0n+2) {
+  background-color: rgba(0,0,0,.15);
+}
+/*inputs and submitBtn*/
+
+.submitBtn {
+  background-color: rgb(66, 215, 255);
+}
+@keyframes flash {
+  from {
+    background-color: rgb(66, 215, 255);
+  }
+
+  to {
+    background-color: rgba(0, 132, 172, 1);
+  }
+
+}
+
+.submitBtn:hover {
+  animation-name: flash;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+}
+
 /*media queries to handle some text and nav pieces*/
 
 @media (max-width: 992px) {
