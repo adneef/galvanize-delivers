@@ -47,7 +47,17 @@ $('.orderBtn').click(function(){
 $('.submitBtn').click(function(){
   if (cart.length === 0) {
     $('#myModal').modal('toggle')
-  } else if(cart.length > 0){
+
+    console.log($('#nameField').val().length === 0);
+
+  } else if (($('#nameField').val().length === 0) || ($('#phoneField').val().length === 0) || ($('#addressField').val().length === 0)) {
+
+
+    $('.modal-body p').text("Hey! Tell me who this is for and where it's going!")
+    $('#modalConfirm').text('Give Info')
+    $('#myModal').modal('toggle')
+
+  } else if (cart.length > 0) {
     $('.modal-body').children().remove()
     let orderClone = $('.orderAndInfo').clone()
     orderClone.find('button').remove()
@@ -55,23 +65,40 @@ $('.submitBtn').click(function(){
     orderClone.removeClass('col-md-4')
     orderClone.find('table').css('width', '95%')
     $('.modal-body').append(orderClone)
-    $('#modalConfirm').text('Confirm Order')
+    $('#modalConfirm').text('Confirm Order').attr('data-dismiss', '')
     console.log($('#modalConfirm'));
     $('#modalCancel').text('Cancel')
     $('#myModal').modal('toggle')
+
+    // modal confirm update
+
+    $('#modalConfirm').click(function(){
+
+      // replace modal header content
+
+      $('.modal-header h5').remove()
+      let h2 = $('<h2/>').text('Order Placed!')
+      $('.modal-header').prepend(h2)
+
+      // remove and replace modal body elements
+
+      $('.modal-body').children().remove()
+      $('.modal-body').append($('<p/>'))
+      $('.modal-body').children().text(`Your order will arrive as soon as this site exists!
+        If you gave us an email, your receipt has been emailed.`)
+
+      // remove and replace modal bottom buttons
+
+      $('.modal-footer').children().remove()
+      let thanksBtn = $('<a/>').addClass('btn').addClass('btn-primary').attr('href', 'indexBS.html').text('Thank You!')
+      $('.modal-footer').append(thanksBtn)
+
+      $('#myModal').modal('show')
+
+    })
   }
 })
 
-modal confirm update
 
-$('#modalConfirm').click(function(){
-  $('.modalBody').children().remove()
-  $('.modalBody').append($('<p/>'))
-  $('.modalBody').children().text(`Your order will arrive as soon as this site exists!
-    If you gave us an email, your receipt has been emailed.`)
-
-  $('#myModal2').modal('toggle')
-
-})
 
 })
