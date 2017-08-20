@@ -76,6 +76,7 @@ a:hover {
 .card-deck{
   margin: 1.45% 0 0 0;
 }
+
 .bottomDeck {
   padding-bottom: 3%;
 }
@@ -96,6 +97,9 @@ a:hover {
   font-size: 16px;
   text-shadow: none;
   border: .25px solid grey;
+  max-width: 320px;
+  min-width: 320px;
+  margin-top: 3%;
 }
 
 .card-title{
@@ -121,7 +125,7 @@ a:hover {
   font-size: 20px;
   text-shadow: none;
   background: ivory;
-  margin: 2% 0 4% 2.5%;
+  margin: 5.6% 0 4% 2.5%;
 }
 
 .tableBody,
@@ -133,11 +137,11 @@ tfoot {
     background-color: rgba(0,0,0,.15);
 }
 
-.table-striped tbody td:nth-of-type(even) {
+.table-striped tbody td:nth-child(0n+3) {
     text-align:right;
 }
 
-thead th:nth-child(even){
+thead th:nth-child(0n+3){
   text-align:right;
 }
 
@@ -154,8 +158,20 @@ tfoot tr:nth-child(0n+2) {
 }
 /*inputs and submitBtn*/
 
+.symbolColumn {
+  color: rgb(66, 215, 255);
+}
+
+.fa-user-circle,
+.fa-phone,
+.fa-envelope-o,
+.fa-building-o {
+  padding: 96% 0;
+}
+
 .submitBtn {
   background-color: rgb(66, 215, 255);
+  border: none!important;
 }
 @keyframes flash {
   from {
@@ -188,5 +204,20 @@ tfoot tr:nth-child(0n+2) {
   }
   .copyHeadings {
     font-size: 24px;
+  }
+  .table {
+    width: 60%;
+  }
+  .fa-user-circle,
+  .fa-phone,
+  .fa-envelope-o,
+  .fa-building-o {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .table {
+    width: 50%;
   }
 }
